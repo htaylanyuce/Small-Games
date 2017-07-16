@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Word Practice</title>
+    <style>
+     
+      .row
+      {
+        text-align: center;
+        font-size: 50px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="jumbotron">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+          </p>
+
+        </div>
+
+     </div>
+     <div class="row">
+         <div   class="col-lg-12">Index</div>
+
+     </div>
+
+    <div class="row">
+        <div id ="change" class="col-lg-12">asdfad</div>
+
+    </div>
+
+    <script>
+      var paragraph = document.getElementsByTagName("p")[0];
+      var seperate = paragraph.textContent.split(" ");
+      var len = seperate.length;
+      var par2 = document.querySelector("#change");
+      var index = document.getElementsByClassName("row")[0];
+      var i = 0;
+      var k = 0;
+      function getRandomColor() {
+              var letters = '0123456789ABCDEF';
+              var color = '#';
+              for (var i = 0; i < 6; i++ ) {
+                  color += letters[Math.floor(Math.random() * 16)];
+              }
+              return color;
+          }
+      function ss(i,k) {
+         par2.textContent = i.trim();
+         par2.style.color= getRandomColor();
+         index.textContent = k;
+         index.style.color = getRandomColor();
+         //paragraph.style.color = getRandomColor();
+      }
+      setInterval(function(){ ss(seperate[k = k + 1],k); }, 1000);
+    </script>
+  </body>
+</html>
