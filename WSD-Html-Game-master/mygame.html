@@ -12,6 +12,7 @@
 </script>
 <style>
 
+
 div#rambo{
 
     position: fixed;
@@ -45,15 +46,26 @@ div#enemy_bullet{
     border-width: 3px;
 
 }
+#canvas
+{
+
+    border-style: solid;
+    width: 440px;
+    height: 220px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 </style>
 </head>
 
 <body>
-
-<div id="enemy"><img src="meme.jpg"   style="width:100px;height:40px;"></div>
-<div id="rambo"><img src="rambo.jpg"   style="width:40px;height:40px;"></div>
-<div id="enemy_bullet"><img src="meme.jpg"   style="width:10px;height:10px;"></div>
-<div id="rambo_bullet"><img src="rambo.jpg"   style="width:10px;height:10px;"></div>
+    <div id="canvas"> <img src="http://screenrant.com/wp-content/uploads/rambo-1.jpg"></div>
+    <div id="enemy"><img src="meme.jpg"   style="width:100px;height:40px;"></div>
+    <div id="rambo"><img src="rambo.jpg"   style="width:40px;height:40px;"></div>
+    <div id="enemy_bullet"><img src="meme.jpg"   style="width:10px;height:10px;"></div>
+    <div id="rambo_bullet"><img src="rambo.jpg"   style="width:10px;height:10px;"></div>
 
 
 <script>
@@ -66,7 +78,7 @@ function enemy_loop()
     var y = '+=30px';
     var flag = 1;
     // somehow timer part
-    while(x < 100000){
+    while(x < 10000){
 
       if(x % 70 == 0){
 
@@ -88,7 +100,7 @@ function enemy_loop()
       x = x + 5;
 
     }
- 
+
 }
 function is_shot()
 {
@@ -97,7 +109,7 @@ function is_shot()
   var enemy_width = $('#enemy').width();
 
 
-  if(enemy.left < bullet.left && bullet.left < (enemy.left + enemy_width ))
+  if(enemy.left <= bullet.left && bullet.left <= (enemy.left + enemy_width ))
   {
       alert("Congrats! You shot me down, bang bang");
   }
