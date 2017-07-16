@@ -1,0 +1,25 @@
+body{
+  background-color: orange;
+}
+.row
+{
+  text-align: center;
+   font-size: 50px;
+}
+
+.jumbotron
+{
+  margin-top: 10px;
+}
+#upFont
+{
+  margin-top: 3%;
+  margin-left: 47.5%;
+
+}
+#downFont
+{
+  margin-top: 2%;
+  margin-left: 47%;
+
+}
