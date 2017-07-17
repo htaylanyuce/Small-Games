@@ -1,0 +1,32 @@
+body{
+  background-color: #00e5ee;
+}
+
+body h1
+{
+  margin-top: 0;
+  display: inline-block;
+
+}
+.pics h1
+{
+  display: grid;
+}
+img
+{
+  display: grid;
+}
+#selectedWord
+{
+  margin-left: 40%;
+  font-size: 50px;
+}
+ 
+#youWin
+{
+
+  visibility: hidden;
+  margin-left: 37%;
+  font-size: 70px;
+
+}
